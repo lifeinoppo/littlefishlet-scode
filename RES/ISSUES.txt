@@ -1,0 +1,32 @@
+
+1. 
+basic UI element support :  (reference from QT giude)
+{
+	access   number util
+	assistance
+	common
+	datastructure
+	designer-rule
+	dialog
+	events
+	graphics
+	linguist
+	plugin
+	programming-rule
+	make-tools
+	sql-database
+	threads
+	whitepaper
+	widgets
+	xml-tools
+
+}
+
+2. My RTC  system  
+{
+	
+	code fragment (small pieces of good codes)
+	new project 
+	very important 
+	
+}

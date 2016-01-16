@@ -1,0 +1,13 @@
+
+python  3.3中数学模块
+
+acos  acosh  asin  asinh  atan
+atan2  atanh  ceil  copysign   cos
+sogh  degrees   e   erf   erfc  
+exp   expm1  fabs  factorial   floor  
+fmod  frexp  fsum  gamma  hypot 
+isfinite  isiinf  isnan  ldexp  lgamma  
+log   log10  log1p  log2   modf  
+pi   pow  radians   sin  sinh 
+sqrt  tan   radians   sin    sinh 
+sqrt    tan   tanh    trunc 

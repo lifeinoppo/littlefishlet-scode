@@ -1,0 +1,69 @@
+
+【
+	
+	划过链接，手型鼠标
+	
+	style="cursor:hand"
+
+	】
+	
+【
+
+	左右阴影背景
+	
+	body{
+		
+		text:align:center;
+		background-repeat:repeat-y;
+		background-position:center;
+		background-image:url(../images/bg.jpg)'
+	
+	}
+
+】	
+
+【
+	
+	var time = new Date();
+	document.write(“ 要写入的内容    ”+time);
+
+】
+
+
+【
+	
+	凹下去的文字
+	
+	<div style="width:300px;padding:20px;overfolw;hidden;word-wrap:
+	break-word;word-break:break:all;font-size:12px;line-height:18px;
+	background-color:#eeeeee;">
+	<font disabled>
+	内容， 凹下去了<br>
+	试试吧 <br>
+	</div>
+
+
+】
+
+
+【
+	
+	p:first-letter{
+		font-size:3em;		
+	}
+	
+	p:first-line{
+		font-style:italic;
+	}
+	
+	】
+
+【 Attribute selectors 
+	
+	img[width]{border: black thin solid;}
+	img[height="300"] {border:red thin solid; }
+	image[alt~="flowers"] {border: #ccc thin solid;}
+	
+	】
+	
+	

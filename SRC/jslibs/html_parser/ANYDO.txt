@@ -1,0 +1,8 @@
+
+before this , read the   'HTML specification'  from Internet, see how to parse it 
+
+reference from RES/REF/HtmlParser2.0 project in opensource world 
+
+1. filter 
+2. http 
+3. 

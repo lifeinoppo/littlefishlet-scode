@@ -1,0 +1,25 @@
+
+class HTMLWriter:
+
+	def _init_(self,file=sys.stdout)
+	
+	def header(self):
+		self.file.write("<!doctype html>\n</html>\n")   # file is actually  sys.stdout
+		
+	def title(self,title):
+		self.file.write("<head><title>{}</title></head>\n".format(escape(title)));
+		
+	def start_body(self):
+		self.file.write("<body>\n");
+		
+	def body(self,text):
+		self.file.write("<p>{}</p>\n".format(escape(text)));
+		
+	def end_body:
+	
+	def footer(self):
+		self.file.write("</html>\n");
+		
+	
+	
+	

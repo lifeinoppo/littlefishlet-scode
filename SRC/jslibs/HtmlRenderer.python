@@ -1,0 +1,21 @@
+import HTMLWriter
+
+
+class HTMLRenderer:
+
+	def _init_(self.htmlWriter):
+		self.htmlWriter = htmlWriter;
+	
+	def header(self,title):
+		self.htmlWriter.header();
+		self.htmlWriter.title(title);
+		self.htmlWriter.start_body();
+		
+	def paragraph(self,text):
+		self.htmlWriter.body(text);
+		
+	def footer(self):
+		self.htmlWriter.end_body();
+		e\self.htmlWriter.footer();
+		
+	

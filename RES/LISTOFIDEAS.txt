@@ -1,0 +1,18 @@
+
+1. Indri(Lemur) 是Lemur Tookit中的一个完整的搜索引擎，
+介绍其原理和使用的Slide 
+
+2. www.dataparksearch.org/  是一个基于C语言的
+全功能的开源基于Web的搜索引擎
+
+3. http://gforge.osdn.net.cn/projects/pnnyse
+
+4. Clucene C++端口，基于 Lucene
+
+5. 我们需要：
+	打字程序
+	绘图程序
+	浏览网页的程序
+	翻译程序
+	
+6. 使用 浏览器调试程序

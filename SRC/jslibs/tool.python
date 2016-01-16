@@ -1,0 +1,8 @@
+
+from datatime import data,timedelta
+data(2013,11,15)-data(2013,10,29)
+datetime.timedelta(17)
+
+data(2013,11,15)+timedelta(60)   #将来
+
+data(2013,11,15)-timedelta(60)   #过去
