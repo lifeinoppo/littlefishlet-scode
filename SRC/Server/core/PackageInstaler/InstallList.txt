@@ -1,9 +1,23 @@
 
 the installed package can be divided into two categories :
 apps  and  framework-sopport 
+all resources will be found in the RES dir 
 
 apps:
+1.HTML5 Canvas{
+	1. http://andrew-hoyer.com/experiments/cloth/
+	2. http://www.mrspeaker.net/dev/parcycle/
+	3. http://www.professorcloud.com/mainsite/canvas-nebula.htm
+	4. http://bomomo.com/
+	5. http://hakim.se/experiments/html5/magnetic/02/
+	6. http://hakim.se/experiments/html5/particles/02/
+	7. http://www.html5tricks.com/demo/jiaoben1765/index.html
+	
+	
+}   //  网络加载方式
 
+2. http://www.html5tricks.com/
+已经删选到 http://www.html5tricks.com/category/html5-demo/page/15
 
 
 frameworks:
