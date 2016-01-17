@@ -1,0 +1,7 @@
+Python: How to Find the Source Code 
+Python 是用C实现的开源项目，所以可以阅读他的一些优秀代码
+
+IPython ：
+在IPython命令行中：
+* 使用一个？号，是显示_doc_
+* 使用两个？？，是显示源码

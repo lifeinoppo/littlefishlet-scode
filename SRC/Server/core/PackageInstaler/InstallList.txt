@@ -1,0 +1,13 @@
+
+the installed package can be divided into two categories :
+apps  and  framework-sopport 
+
+apps:
+
+
+
+frameworks:
+1. www.sencha.com/products/extjs/
+
+2. tracking.js  一个轻量级的js库，可以做实时的人脸检测，色彩
+追踪和标记好友的脸。从静态图片中检测脸，眼睛和嘴巴。

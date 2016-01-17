@@ -1,0 +1,13 @@
+Unix 命令行程序和内建命令
+
+按照用途分类：（这里面的所有命令都可以看源代码的哦）
+
+文件系统：cat ; cd ; chmod ; chgrp ; chown ; cksum ; cmp ; cp ; dd ; du ; df;
+程序：at ; bg ; chroot ; cron ; fg ; kill ; killall ; nice ; pgrep ; pidof ; pkill ; 
+用户环境：clear ; env ; exit ; finger ; history ; id ; logname ; mesg ; passwd ; 
+文本编辑：awk; banner ; basename ; comm ; csplit ; cut ; dirname ; ed ; fmt ; 
+Shell内建：alias ; echo ; expr ; printf ; sleep ; test ; true 和 false ; unset ; 
+网络：dig ; host ; ifconfig ; inetd ; netcat ; netstat ; nslookup ; ping ; 
+查找：find ; grep ; locate ; wahtis ; whereis 
+文档：apropos ; help ; man 
+杂项：bc ; dc ; cal ; date ; lp ; lpr ;
