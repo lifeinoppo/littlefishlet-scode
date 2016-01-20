@@ -19,6 +19,13 @@ apps:
 2. http://www.html5tricks.com/
 已经删选到 http://www.html5tricks.com/category/html5-demo/page/15
 
+3. system apps :{
+		
+		FileBrowser 
+		
+   }
+
+
 
 frameworks:
 1. www.sencha.com/products/extjs/
