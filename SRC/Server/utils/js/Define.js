@@ -1,0 +1,5 @@
+
+ // use 
+ // the  Object.DefineProperty()
+ 
+ 

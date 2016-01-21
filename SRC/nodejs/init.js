@@ -9,5 +9,10 @@ window.onload = function(){
 }
 
 
+function setup(){
+	
+	
+}
+
 
 
