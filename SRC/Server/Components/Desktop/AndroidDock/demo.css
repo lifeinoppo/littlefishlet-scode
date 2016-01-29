@@ -13,6 +13,8 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbf5f3', endColorstr='#d6c8bd',GradientType=1 );
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
+  background-image: url('./back.jpg');
 }
 
 h1, em, #information {

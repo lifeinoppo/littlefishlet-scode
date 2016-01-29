@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title> SaltOS </title>
+  <meta name="description" content=" The SaltOS for you ">
+  <meta name="author" content="Webstuffshare">
+  <link rel="stylesheet" href="demo.css?v=2">
+  
+  <!--system css-->
+  <link rel="stylesheet" href="jquery-bootstrap-right-click-menu/css/bootstrap.min.css">  <!--this css will need to modify later -->
+  <!-- end of system css-->
+  
+  <!--App CSS 1-->
+  <link href="musicplayer/html5-cool-audio-player/css/styles.css" rel="stylesheet" type="text/css" />
+  <!--end of App CSS 1-->
+  
+  <!--App CSS 2-->
+
+  <!--end of App CSS 2-->
+  
+  
+  <!--App CSS 3-->
+  <!--link href="pure-css3-clock/css/style.css" rel="stylesheet" type="text/css" /-->	
+  <!--end of App CSS 3-->
+  
+  <!--App CSS 5-->
+  <style>
+  *{margin:0;padding:0;list-style:none;border:none;}
+  #zzsc{width:920px;margin:40px auto;}
+  </style>
+  <!--end of App CSS 5-->
+  
+  
+</head>
+
+  
+
+  <!--Common js functions, put it in front of dynamic js construction-->
+  <script type="text/javascript">
+  function initDesktop(){
+	// nop here temporarily 
+	
+	// load launcher app icons 
+	// loadCss("icons/html5-css3-safari-logo/css/style.css");
+	// end of icon load
+	
+	// init the right-click for mouse support 
+	loadScript("jquery-bootstrap-right-click-menu/js/BootstrapMenu.min.js");
+	loadScript("jquery-bootstrap-right-click-menu/js/initRightClickSupport.js");
+
+	
+  };
+  function includeDynamic1(){
+	var data = '<div class="example"><div class="player"><div class="pl"></div><div class="title"></div><div class="artist"></div><div class="cover"></div><div class="controls"><div class="play"></div><div class="pause"></div><div class="rew"></div><div class="fwd"></div></div><div class="volume"></div><div class="tracker"></div></div><ul class="playlist hidden"><li audiourl="musicplayer/html5-cool-audio-player/images/suger.mp3" cover="musicplayer/html5-cool-audio-player/images/suger.jpg" artist="Maroon 5">Sugar.mp3</li><li audiourl="musicplayer/html5-cool-audio-player/images/maroon.mp3" cover="musicplayer/html5-cool-audio-player/images/maroon.jpg" artist="平安">洋葱.mp3</li><li audiourl="musicplayer/html5-cool-audio-player/images/mysong.mp3" cover="musicplayer/html5-cool-audio-player/images/mysong.jpg" artist="曲婉婷">我的歌声里.mp3</li></ul></div>';
+	document.write(data);
+	
+	loadScript("musicplayer/html5-cool-audio-player/js/main.js");
+	
+  };
+  
+  function includeDynamic2(){
+	var data = '<div id="site-wrapper">		<section id="section-header" data-coloroverlap="dark"></section>		<section id="second-phase" class="phase-row" data-title="Illustrations" data-coloroverlap="light">		<div class="shell">			<div class="second-row">				<article>					<div style="text-align:center;clear:both;">		</div>						<div id="character-slider" class="sky-carousel sc-no-select" style="visibility: visible;">							<div class="sky-carousel-wrapper" style="visibility: visible; opacity: 1;">								<ul class="sky-carousel-container" style="margin-top: -21.2px; left: -1552.4px; transition: left 0.45s ease-out; -webkit-transition: left 0.45s ease-out;">									<li style="transform-origin: center 256px 0px; transform: translate(0px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 10;" class="">										<img src="imageplayer/html5-mobile-image-player/images/one1.jpg" alt="" class="sc-image">										<div class="sc-content">											<h2>Snoop</h2>											<p>Are you in the market for information? If so, then Snoops the Bird for you! This Bird specialises at working undercover, discretely finding out whatever you need to know. Shhh… its a secret, alright?</p>										</div>									</li>									<li style="transform-origin: center 256px 0px; transform: translate(241.2px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 8;" class="">										<img src="imageplayer/html5-mobile-image-player/images/one2.jpg" alt="" class="sc-image">										<div class="sc-content">											<h2>Snappy</h2>											<p>Looking for a wedding photographer? Or perhaps you want a portrait of your adorable pooch, to decorate the mantelpiece! When it comes to photography, call Snappy.</p>										</div>									</li>									<li style="transform-origin: center 256px 0px; transform: translate(482.4px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 8;" class="">										<img src="imageplayer/html5-mobile-image-player/images/one3.jpg" alt="" class="sc-image">										<div class="sc-content">											<h2>Handy</h2>											<p>Our Handy Bird loves the jobs you hate… from putting up shelves to fixing a leaky pipe, this Bird is the DIY master. </p>										</div>									</li>									<li style="transform-origin: center 256px 0px; transform: translate(723.6px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 9;" class="">										<img src="imageplayer/html5-mobile-image-player/images/one4.jpg" alt="" class="sc-image">										<div class="sc-content">											<h2>Blabber</h2>											<p>Got a message that needs to be delivered? Or perhaps its an urgent package you need sent. Blabber will get your mail to its recipient, faster than a speeding bullet. Well, almost.</p>										</div>									</li>																	</ul>							</div>							<div class="sc-content-wrapper"><div class="sc-content-container" style="visibility: visible; opacity: 1;"><div class="sc-content"><h2>Thinker</h2><p>Out of all the Birds, Thinker is the brains of the operation. Need a cunning plan delivered in a flash? From business strategies through to first class excuses, Thinker has got a plan for every scenario.</p></div></div></div><canvas class="sc-overlay sc-overlay-left" width="300" height="1" style="width: 300px;"></canvas><canvas class="sc-overlay sc-overlay-right" width="300" height="1" style="width: 300px;"></canvas></div>					</article>				</div>			</div>		</section>		</div>';
+	document.write(data);
+	
+	loadScript("imageplayer/html5-mobile-image-player/js/lib.js");
+	loadScript("imageplayer/html5-mobile-image-player/js/scripts.js");
+
+  };
+  
+  function includeDynamic3(){
+	// see if z-index works or not 
+	var data = ' <div class="clock-wrapper" >  <div class="clock-border">    <div class="clock">      <ul class="minute-marks">        <li class="five"></li>        <li></li>        <li></li>        <li></li>        <li></li>        <li class="five"></li>        <li></li>        <li></li>        <li></li>        <li></li>        <li class="five"></li>        <li></li>        <li></li>        <li></li>        <li></li>        <li class="five"></li>        <li></li>        <li></li>        <li></li>        <li></li>        <li class="five"></li>        <li></li>        <li></li>        <li></li>        <li></li>        <li class="five"></li>        <li></li>        <li></li>        <li></li>        <li></li>      </ul>      <div class="hour">        <div class="hand"></div>      </div>      <div class="minute">        <div class="hand"></div>      </div>      <div class="second">        <div class="hand"></div>      </div>    </div>  </div></div>';
+	document.write(data);
+	
+	loadCss("pure-css3-clock/css/style.css");
+  }
+  
+  function includeDynamic5(){
+	// see if z-index works or not 
+	var data = ' <div id="zzsc" ></div> ';
+	document.write(data);
+	
+	loadScript("html5-canvas-dance-time/js/zzsc.js");
+	// $("#zzsc").css("z-index", parseInt( -99 ));
+  }
+  
+  
+  <!-- utils function -->
+  function loadScript(addr){
+	var head = document.getElementsByTagName('head')[0];
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = addr;  // better check null first 
+	head.appendChild(script);
+  }
+  
+   function loadCss(addr){
+	var head = document.getElementsByTagName('head')[0];
+	var link = document.createElement("link");
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	link.href = addr;  // better check null first 
+	head.appendChild(link);
+  }
+  
+  <!-- end of utils function -->
+  
+  </script>
+ 
+  <!--Common js functions-->
+  
+    
+
+   <!--App js 1-->
+	<script type="text/javascript" src="musicplayer/html5-cool-audio-player/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="musicplayer/html5-cool-audio-player/js/jquery-ui-1.8.21.custom.min.js"></script>
+   <!--end of App js 1 -->
+   
+   <!--App js 2-->
+	
+	
+	
+   <!--end of App js 2-->
+   
+   <!--App js for drag-support -->
+	<script type="text/javascript" src="js/EasyDrag.js"></script>
+   <!-- end of App js for drag-support -->
+  
+  
+  <!--Dynamic Sctipt construction of css and html elements -->
+  
+  <!--init Desktop-->
+  <script type="text/javascript" >
+	initDesktop();
+  </script>
+  <!--end of init of Desktop-->
+  
+  <!--App container 1 -->
+  <script type="text/javascript">includeDynamic1();</script>
+  <!--end of App container 1 -->				
+  
+  <!--App container 2 -->
+  <script type="text/javascript">//includeDynamic2();</script>
+  <!--end of App container 2 -->	
+  
+  <!--App container 3 -->
+  <script type="text/javascript">includeDynamic3();</script>
+  <!--end of App container 3 -->	
+  
+  <!--App container 5 -->
+  <script type="text/javascript">includeDynamic5();</script>
+  <!--end of App container 5 -->	
+  
+  <!--end of Dynamic Script construction -->
+
+  <!-- actions -->
+
+  <script type="text/javascript">
+
+	loadScript("actions.js");
+	
+	// init drag-move support 
+	$(".player").easydrag(true);
+	
+  </script>
+  <!-- end of actions -->
+  
+
+  
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="javascript/jquery-1.7.2.min.js"%3E%3C/script%3E'))</script>
+  <script src="javascript/demo.js"></script>
+  <script src="javascript/modernizr.custom.34807.js"></script>
+  <script> if(!Modernizr.csstransforms3d) document.getElementById('information').style.display = 'block'; </script>
+
+<body>
+  <div id="container">    <!--the container is the key div here -->
+    
+   <div style="text-align:center;clear:both;">
+
+				
+	<!--App container 1 -->
+
+	<!--end of App container 1 -->				
+
+					
+	<!--App container 2 -->
+
+
+	<!--end of App container 2 -->				
+
+    <span id="information" style="display:none">Your browser doesn't support CSS3 3D Transform</span>
+  
+  </div>  
+  <div id="dock-wrapper" >
+    <div class="dock">
+      <div class="dock-front">
+    	    <img src="images/arrow-up.png" alt="Arrow Up" id="arrow-up" />
+      </div>
+      <div class="dock-top">
+    	    <img src="images/arrow-down.png" alt="Arrow Down" id="arrow-down" />
+      </div>
+    </div>
+    <div class="item">
+    	<img src="images/launcher-pro.png" text="launcher" width="60" />
+    	<img src="images/2do.png" text="AnyDo" width="60" />
+    	<img src="images/music.png" text="music" width="60" />
+    	<img src="images/drive.png" text="drive" width="60" />
+    	<img src="images/plex.png"  text="browser" width="60" />
+    	<img src="images/maps.png" width="60" />
+		
+	
+		
+    </div>
+  </div>
+  
+  
+  <!-- the container for browser app -->
+  <div id="mainContent" > </div>
+  <!-- end of the container for browser app -->
+
+  
+  <!-- the canvas div -->
+    <div id="canvasContainer"></div>
+  <!-- end of canvas div -->
+  
+ </div> 
+
+ </body>
+</html>

@@ -28,5 +28,13 @@
 		return this; 
 	 }
 	 
+	 dispatchEvent  : function(eve){
+		 
+		Event.create(Event.Type.Click());
+		 
+	 }
+	 
+	 
+	 
 	 
  }
