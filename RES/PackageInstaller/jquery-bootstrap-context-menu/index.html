@@ -7,29 +7,20 @@
 <title>jQuery Bootstrap右键菜单DEMO演示</title>
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.css">
-<link rel="stylesheet" href="css/toastr.css">
-<link rel="stylesheet" href="css/highlight-8.6.default.min.css">
-<link rel="stylesheet" type="text/css" href="css/default.css">
-
 <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
 <script src="js/BootstrapMenu.min.js"></script>
-<script src="js/toastr.js"></script>
-<script src="js/highlight-8.6.default.min.js"></script>
+
+
 
 </head>
 <body>
 	
 <div class="container">
-	<h4 id="demo1">Demo 1</h4>
-	<p>在这个例子中，在下面的矩形区域内右键点击就可以打开上下文菜单。</p>
 
-	<div class="row collapsibleContainer">
-		<div class="col-md-6">
+
 			<div id="demo1Box" class="text-center" style="height: 300px; border:1px solid #ddd">
 				<span style="line-height: 300px">在这个区域内的任何位置点击右键</span>
-			</div>
-		</div>
+			
 	</div>
 </div>
 
@@ -38,17 +29,17 @@ var menu = new BootstrapMenu('#demo1Box', {
   actions: [{
 	name: 'jQuery特效',
 	onClick: function() {
-	  toastr.info("'jQuery特效");
+	  // actions could be taken 
 	}
   }, {
 	name: 'HTML5资源教程',
 	onClick: function() {
-	  toastr.info("'HTML5资源教程");
+	  // actions could be taken 
 	}
   }, {
 	name: 'html5tricks',
 	onClick: function() {
-	  toastr.info("'html5tricks");
+	  // actions could be taken 
 	}
   }]
 });
