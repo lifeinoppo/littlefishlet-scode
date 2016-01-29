@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery/CSS3实现Android Dock效果DEMO演示</title>
+  <meta name="description" content="Tutorial : Creating Android Dock Using jQuery & CSS3">
+  <meta name="author" content="Webstuffshare">
+  <link rel="stylesheet" href="demo.css?v=2">
+
+  
+</head>
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+ <!--Common js functions, put it in front of dynamic js construction-->
+  <script type="text/javascript">
+  function testjQuery(){
+	// nop here temporarily 
+	 $('.volume').slider({
+        range: 'min',
+        min: 1,
+        max: 100,
+        value: 80,
+        start: function(event,ui) {},
+        slide: function(event, ui) {
+            
+        },
+        stop: function(event,ui) {},
+    });
+  };
+  
+  
+  </script>
+  
+	<script type="text/javascript">
+	testjQuery();
+	</script>
+	
+  
+
+<body>
+ 
+ <div class="volume"></div><div class="tracker"></div>
+ 
+</body>
+</html>

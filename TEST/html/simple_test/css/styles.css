@@ -1,0 +1,32 @@
+
+body {
+    background-color: #aaa;
+}
+
+
+.d1	 {
+    cursor: pointer;
+    height: 23px;
+    left: 167px;
+    position: absolute;
+    top: 65px;
+		margin: 110px 100px 100px 120px;
+    width: 138px;
+}
+.d2 {
+    cursor: pointer;
+    height: 23px;
+    left: 167px;
+    position: absolute;
+    top: 65px;
+    width: 138px;
+}
+
+.d3 {
+    cursor: pointer;
+    height: 23px;
+    left: 167px;
+    position: absolute;
+    top: 65px;
+    width: 138px;
+}

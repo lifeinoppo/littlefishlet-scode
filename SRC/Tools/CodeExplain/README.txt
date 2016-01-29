@@ -29,3 +29,9 @@ if one class implements a same-name interface ,
 it will make communicate between components much easier . 
 So here we need an interface transfer .
 
+3. using   keyword    (same as first one  --  acquire)
+
+4. include ,  will return a instance of that 
+
+5. inherits ,  force to inplement some interfaces, which will 
+ do help to later functional check and standarded. 
