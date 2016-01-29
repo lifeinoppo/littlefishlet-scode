@@ -1,0 +1,27 @@
+
+
+~ 1. 务必学习的语言：
+	
+	c 与 c++
+	python
+	Javascript
+	Ruby on rails
+	php
+	perl
+	nodejs 与 Express
+	mongodb
+	postgres
+	mysql 与 nosql
+	git
+	
+
+
+~ 2.相关知识 学习 
+
+	html5
+	css3 
+	sass
+	jquery，angular.js react.js 与 nodejs
+	websocket 与 ajax request
+	python
+	git
