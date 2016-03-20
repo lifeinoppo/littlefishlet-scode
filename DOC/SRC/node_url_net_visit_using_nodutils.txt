@@ -1,0 +1,21 @@
+
+ 1. 
+ // get sample 
+ utils.url.get("www.adb.com",function(html)){
+	
+	if(html){
+		console.log(html);
+	}
+	
+ }
+ 
+ // post sample 
+ utils.url.post("httpbin.org/post", {post_data}){
+ 
+	function(resp){
+		if(resp){
+			console.log(resp);
+		}
+	}
+ 
+ }

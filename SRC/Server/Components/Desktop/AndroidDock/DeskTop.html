@@ -30,7 +30,11 @@
   </style>
   <!--end of App CSS 5-->
   
-  
+  <!--notification CSS -->
+  <link rel="stylesheet" type="text/css" href="css/notify/ns-default.css" />  
+  <link rel="stylesheet" type="text/css" href="css/notify/ns-style-bar.css" />
+  <!--end of notification CSS -->
+ 
 </head>
 
   
@@ -126,6 +130,12 @@
 	<script type="text/javascript" src="js/EasyDrag.js"></script>
    <!-- end of App js for drag-support -->
   
+   <!--App js for notification-support -->
+    <script type="text/javascript" src="js/notify/notify.js"></script>
+	<script src="js/notify/modernizr.custom.js"></script>
+	<script src="js/notify/classie.js"></script>
+	<script type="text/javascript" src="js/notify/notificationFx.js"></script>	
+   <!-- end of App js for notification-support -->
   
   <!--Dynamic Sctipt construction of css and html elements -->
   
@@ -165,6 +175,14 @@
   </script>
   <!-- end of actions -->
   
+  <script type="text/javascript">
+
+	// init drag-move support 
+	notify_me();
+	
+  </script>
+  
+  
 
   
   <script>!window.jQuery && document.write(unescape('%3Cscript src="javascript/jquery-1.7.2.min.js"%3E%3C/script%3E'))</script>
@@ -173,6 +191,8 @@
   <script> if(!Modernizr.csstransforms3d) document.getElementById('information').style.display = 'block'; </script>
 
 <body>
+
+  
   <div id="container">    <!--the container is the key div here -->
     
    <div style="text-align:center;clear:both;">

@@ -1,0 +1,26 @@
+
+ 
+ 1. File 
+ 
+ * utils.file.write(file,data,[,options],function(err){}) 
+ 
+ options = "w" write  or  "a"  append
+ 
+ * utils.file.read(file,[,encoding],function(err,data){})
+ 
+ * utils.file.exists(file,function(exists){})
+ 
+ exists : true or false
+
+ * utils.file.getModTime(file,function(data){})
+ 
+ the Data object is given to the callback as an argument 
+ 
+ * utils.file.remove(file,callback)
+ 
+ * utils.file.createpath(path,callback)
+  
+ 
+ 
+ 
+ 

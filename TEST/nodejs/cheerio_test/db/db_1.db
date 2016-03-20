@@ -1,0 +1,4 @@
+ <ul id="pairs">
+    <li class="default">default</li>,
+	<li class="name">newval</li>
+</ul>
