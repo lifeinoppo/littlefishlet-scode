@@ -1,0 +1,29 @@
+node ../../bin/texts.js --from json --to text
+<<<
+["text",
+  ["numbered", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["numbered", { "level": 1 },
+    ["plain", "Second."]
+  ],
+  ["numbered", { "level": 1 },
+    ["plain", "Third."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "Fourth."]
+  ],
+  ["numbered", { "level": 1 },
+    ["plain", "Fifth."]
+  ]
+]
+>>>
+1.  First.
+
+    1.  Second.
+
+    2.  Third.
+
+2.  Fourth.
+
+    1.  Fifth.

@@ -1,0 +1,18 @@
+node ../../bin/texts.js --from json --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "text "],
+    ["math", "2+2=4"],
+    ["plain", "."]
+  ],
+  ["formula", { "level": 0 },
+    ["plain", "E=mc^2"]
+  ]
+]
+>>>
+text $2+2=4$.
+
+\begin{equation}
+E=mc^2
+\end{equation}

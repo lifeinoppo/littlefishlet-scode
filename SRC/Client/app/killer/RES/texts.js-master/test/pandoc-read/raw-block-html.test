@@ -1,0 +1,12 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc-json --to json
+<<<
+<h1>Heading</h1> in HTML
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Heading"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "in HTML"]
+  ]
+]

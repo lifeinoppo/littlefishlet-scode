@@ -1,0 +1,31 @@
+node ../../bin/texts.js --from json --to xelatex
+<<<
+["text",
+  ["numbered", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "Second."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "Third."]
+  ]
+]
+>>>
+\begin{enumerate}
+
+\item First.
+
+\end{enumerate}
+
+\begin{itemize}
+
+\item Second.
+
+\end{itemize}
+
+\begin{enumerate}
+
+\item Third.
+
+\end{enumerate}

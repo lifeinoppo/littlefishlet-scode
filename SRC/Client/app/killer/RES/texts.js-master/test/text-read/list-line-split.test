@@ -1,0 +1,16 @@
+node ../../bin/texts.js --from text --to json
+<<<
+  * First.
+    Second.
+
+99. First.
+    Second.
+>>>JSON
+["text",
+  ["bulleted", { "level": 0 },
+    ["plain", "First. Second."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "First. Second."]
+  ]
+]

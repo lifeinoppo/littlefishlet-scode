@@ -1,0 +1,260 @@
+{
+  var unindent = function(inlines, level) {
+    return inlines.map(function (inline) {
+      if (inline[0] === 'plain')
+        return ['plain', inline[1].substr(level * 4)];
+      return inline;
+    });
+  };
+
+  var makeRTL = function(block) {
+    block[0][1].direction = 'rtl';
+    return block;
+  };
+}
+
+Blocks
+  = first:Block? blocks:(FinalEOL { return []; } / BlockEnd b:Block { return b; })*
+  { return [].concat.apply(first, blocks); }
+
+Block
+  = rlm:RLM? block:BlockNoRLM
+  { return (rlm.length > 0 ? makeRTL(block) : block); }
+
+BlockNoRLM
+  = Verbatim
+  / Formula
+  / Divider
+  / Table
+  / Note
+  / Link
+  / Image
+  / Heading
+  / Bulleted
+  / Numbered
+  / Quote
+  / Comment
+  / Para
+
+InlinesWithBreaks
+  = inlines:(Inline / Break)*
+  { return inlines; }
+
+/******************************* Basic elements *************************************/
+
+EOF
+  = !.
+
+EOL
+  = '\n' / '\r' '\n'?
+
+BlockEnd
+  = EOL EOL
+
+FinalEOL
+  = EOL EOF
+
+Break
+  = '  ' ' '* EOL
+  { return ['break', '\n']; }
+
+Indent
+  = '    '
+
+NotIndent
+  = '   ' / '  ' / ' '
+
+Inline
+  = chars:Char+
+  { return chars.join(''); };
+
+RLM
+  = '\u200F'
+
+Char
+  = !Heading1Bottom !Heading2Bottom !BlockEnd !Break !FinalEOL
+  c:( RLM { return ''; } // ignore right-to-left marks inside text
+    / (EOL Indent*) { return ' '; }
+    / c:.  { return c; }
+  ) { return c; }
+
+Tildes
+  = '~~~~'+
+
+Dashes
+  = '--------------------------------------------------------------------------------'
+
+/*********************************** Blocks *****************************************/
+
+/*** Headings ***/
+
+Heading
+  = Heading1
+  / Heading2
+  / Heading1Atx
+  / Heading2Atx
+  / Heading3Atx
+
+Heading1
+  = inlines:Inline ' '* Heading1Bottom
+  { return [['heading', { 'level': -3 }, inlines]]; }
+
+Heading1Bottom
+  = EOL RLM? '='+ &(BlockEnd / FinalEOL)
+
+Heading2
+  = inlines:Inline ' '* Heading2Bottom
+  { return [['heading', { 'level': -2 }, inlines]]; }
+
+Heading2Bottom
+  = EOL RLM? '-'+ &(BlockEnd / FinalEOL)
+
+Heading1Atx
+  = '# ' inlines:Inline ' '*
+  { return [['heading', { 'level': -3 }, inlines]]; }
+
+Heading2Atx
+  = '## ' inlines:Inline ' '*
+  { return [['heading', { 'level': -2 }, inlines]]; }
+
+Heading3Atx
+  = '### ' inlines:Inline ' '*
+  { return [['heading', { 'level': -1 }, inlines]]; }
+
+/*** Verbatim ***/
+
+Verbatim
+  = indents:Indent* Tildes EOL inlines:(VerbatimLine / VerbatimBreak)* EOL Indent* Tildes
+  { return [['verbatim', { 'level': indents.length }].concat(unindent(inlines, indents.length))]; }
+
+VerbatimLine
+  = !(Indent* Tildes) chars:(!EOL c:. { return c; })+
+  { return ['plain', chars.join('')]; };
+
+VerbatimBreak
+  = !(EOL Indent* Tildes) EOL
+  { return ['break', '\n']; }
+
+/*** Formula ***/
+
+Formula
+  = indents:Indent* '$$' EOL inlines:(FormulaLine / FormulaBreak)* EOL indents:Indent* '$$'
+  { return [['formula', { 'level': indents.length }].concat(unindent(inlines, indents.length))]; }
+
+FormulaLine
+  = !(indents:Indent* '$$') chars:(!EOL c:. { return c; })+
+  { return ['plain', chars.join('')]; };
+
+FormulaBreak
+  = !(EOL indents:Indent* '$$') EOL
+  { return ['break', '\n']; }
+
+/*** Lists ***/
+
+Bulleted
+  = indents:Indent* NotIndent? ('-' / '*') ' '+ inlines:InlinesWithBreaks
+  { return [['bulleted', { 'level': indents.length }].concat(inlines)]; }
+
+Numbered
+  = indents:Indent* NotIndent? Digit+ '.'  ' '+ inlines:InlinesWithBreaks
+  { return [['numbered', { 'level': indents.length }].concat(inlines)]; }
+
+Digit
+  = [0-9]
+
+/*** Others ***/
+
+Divider
+  = Dashes
+  { return [['divider', { 'level': 0 }]]; }  
+
+Para
+  = indents:Indent* inlines:InlinesWithBreaks
+  { return [['para', { 'level': indents.length }].concat(inlines)]; }
+
+Note
+  = indents:Indent* label:NoteLabel inlines:InlinesWithBreaks
+  { return [['note', { 'level': indents.length }, label].concat(inlines)]; }
+
+NoteLabel
+  = '[^' chars:(!']' !EOL c:. { return c; })* ']:' ' '*
+  { return ['noteref', chars.join('')]; };
+
+Link
+  = indents:Indent* label:LinkLabel inlines:InlinesWithBreaks
+  { return [['link', { 'level': indents.length }, label].concat(inlines)]; }
+
+LinkLabel
+  = '[' !'^' chars:(!']' !EOL c:. { return c; })* ']:' ' '*
+  { return ['linkref', chars.join('')]; };
+
+Image
+  = indents:Indent* '![](<' url:(!'>' !EOL c:. { return c; })+ '>)'
+  { return [['image', { 'level': indents.length }, ['url', url.join('')] ]]; }
+
+/*** Quotes ***/
+
+Quote
+  = indents:Indent* &(NotIndent? '>' ' '+) inlines:(QuoteInline / Break)+
+  { return [['quote', { 'level': indents.length }].concat(inlines)]; }
+
+QuoteInline
+  = lines:(NotIndent? '>' ' '+ chars:QuoteChar+ { return chars.join(''); })+
+  { return lines.join(''); }
+
+QuoteChar
+  = !BlockEnd !Break !FinalEOL
+  c:( (EOL Indent* NotIndent? '>' ' '+) { return ' '; }
+    / c:.  { return c; }
+  ) { return c; }
+
+/*** Comments ***/
+
+Comment
+  = indents:Indent* &(NotIndent? '//' ' '+) inlines:(CommentInline / Break)+
+  { return [['comment', { 'level': indents.length }].concat(inlines)]; }
+
+CommentInline
+  = lines:(NotIndent? '//' ' '+ chars:CommentChar+ { return chars.join(''); })+
+  { return lines.join(''); }
+
+CommentChar
+  = !BlockEnd !Break !FinalEOL
+  c:( (EOL Indent* NotIndent? '//' ' '+) { return ' '; }
+    / c:.  { return c; }
+  ) { return c; }
+
+/*** Tables ***/
+
+Table
+  = rows:TableRow+ TableDivider
+  { return [].concat.apply([], rows); }
+
+TableDivider
+  = '+' ('-'+ '+')+
+
+TableRow
+  = TableDivider EOL lines:TableLine+
+  {
+    var cells = [];
+    lines.forEach(function (line) {
+      line.forEach(function (cell, index) {
+        cells[index] = ((cells[index] || '') + ' ' + cell.trim()).trim();
+      });
+    });
+    
+    var row = []
+    row.push(['row', { 'level': 1 }, cells.shift() ]);
+    cells.forEach(function (cell) {
+      row.push(['col', { 'level': 2 }, cell ]);
+    });
+    return row;
+  }
+
+TableLine
+  = '|' cells:(TableCellLine)+ EOL
+  { return cells; }
+
+TableCellLine
+  = chars:(!'|' !EOL c:. { return c; })+ '|'
+  { return chars.join(''); }

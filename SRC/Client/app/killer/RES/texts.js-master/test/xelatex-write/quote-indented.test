@@ -1,0 +1,11 @@
+node ../../bin/texts.js --from json --to xelatex
+<<<
+["text",
+  ["quote", { "level": 1 },
+    ["plain", "Extra levels of indentation are ignored when not in lists."]
+  ]
+]
+>>>
+\begin{quotation}
+Extra levels of indentation are ignored when not in lists.
+\end{quotation}

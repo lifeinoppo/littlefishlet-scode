@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from text --to json
+<<<
+  > Quotation
+  > text.
+>>>JSON
+["text",
+  ["quote", { "level": 0 },
+    ["plain", "Quotation text."]
+  ]
+]

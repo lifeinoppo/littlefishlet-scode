@@ -1,0 +1,19 @@
+node ../../bin/texts.js --from json --to xelatex
+<<<
+["text",
+  ["heading", { "level": -3 },
+    ["plain", "Heading"]
+  ],
+  ["heading", { "level": -2 },
+    ["plain", "Subheading"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Subsubheading"]
+  ]
+]
+>>>
+\section{Heading}
+
+\subsection{Subheading}
+
+\subsubsection{Subsubheading}

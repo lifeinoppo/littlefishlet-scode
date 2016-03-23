@@ -1,0 +1,24 @@
+node ../../bin/texts.js --from json --to xelatex
+<<<
+["text",
+  ["row", { "level": 1 },
+    ["plain", "One"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Two"]
+  ],
+  ["row", { "level": 1 },
+    ["plain", "Three"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Four"]
+  ]
+]
+>>>
+\begin{longtable}{ | p{0.05\textwidth} | p{0.05\textwidth} |}
+\hline
+One & Two \\
+\hline
+Three & Four \\
+\hline
+\end{longtable}

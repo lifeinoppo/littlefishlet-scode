@@ -1,0 +1,38 @@
+{
+  "name": "texts",
+  "version": "0.8.0",
+  "description": "TextJSON for Node",
+  "keywords": [
+    "text",
+    "markdown",
+    "json"
+  ],
+  "author": "Fedor Sheremetyev <sheremetyev@gmail.com>",
+  "contributors": [ 
+  ],
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://github.com/sheremetyev/texts.js/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sheremetyev/texts.js"
+  },  
+  "main": "./lib/texts.js",
+  "bin": "./bin/texts.js",
+  "preferGlobal": true,
+  "dependencies": {
+    "nopt": "1.0.x",
+    "pegjs": "0.7.x",
+    "walkdir": "*",
+    "through": "~2.1.0"
+  },
+  "devDependencies": {
+    "tests": "0.4.x"
+  },
+  "scripts": {
+    "test": "node node_modules/tests/bin/tests.js test"
+  }
+}

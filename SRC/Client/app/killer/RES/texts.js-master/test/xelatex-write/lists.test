@@ -1,0 +1,27 @@
+node ../../bin/texts.js --from json --to xelatex
+<<<
+["text",
+  ["bulleted", { "level": 0 },
+    ["plain", "first item"]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "second item"]
+  ],
+  ["bulleted", { "level": 1 },
+    ["plain", "nested item"]
+  ]
+]
+>>>
+\begin{itemize}
+
+\item first item
+
+\item second item
+
+    \begin{itemize}
+
+    \item nested item
+
+    \end{itemize}
+
+\end{itemize}
