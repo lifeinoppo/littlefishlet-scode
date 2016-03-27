@@ -1,0 +1,17 @@
+
+
+
+var server = require('http').createServer....
+{
+
+	var host = req.headers.host;
+	
+	switch(host){
+		
+		case : 'www.baidu.com' :
+			proxy.web(req,res,{target:'http://localhost:3000'});
+		
+		
+	}
+
+}
